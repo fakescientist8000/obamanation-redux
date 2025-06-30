@@ -33763,8 +33763,8 @@ const ads = [
 
 	e = campaignTrail_temp
 
-	campaignTrail_temp.candidate_image_url = 'https://i.imgur.com/5WhyIQ6.png';
-	campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/oIoUxiw.png';
+	campaignTrail_temp.candidate_image_url = 'https://i.imgur.com/Ki6WmWE.png';
+	campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/akKZUg5.png';
 	campaignTrail_temp.candidate_last_name = ' ';
 	campaignTrail_temp.running_mate_last_name = ' ';
 	campaignTrail_temp.running_mate_state_id = '469';
