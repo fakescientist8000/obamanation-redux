@@ -37453,12 +37453,12 @@ changePlaylist(romneyWin);
            songChange = 1
            const trumpLose = new Playlist();
   const trumpLoseSong = new Song(
-    "Your Graduation",
-    "Modern Baseball",
-    "Alternative",
-    "2014",
-    "https://i.imgur.com/i7XfIPi.jpeg",
-    "https://file.garden/ZqopcqhJuCvIIvBk/Your%20Graduation.mp3"
+    "FDT",
+    "YG ft. Nipsey Hussle",
+    "Rap",
+    "2016",
+    "https://i.imgur.com/LNMU4Ia.jpeg",
+    "https://file.garden/aGMtX3HRbS8W-RJ6/YG%20-%20FDT%20ft.%20Nipsey%20Hussle%20(Official%20Audio).mp3"
   );
 trumpLose.addSong(trumpLoseSong);
 changePlaylist(trumpLose);
