@@ -37454,7 +37454,7 @@ changePlaylist(romneyWin);
            const trumpLose = new Playlist();
   const trumpLoseSong = new Song(
     "FDT",
-    "YG ft. Nipsey Hussle",
+    "YG (ft. Nipsey Hussle)",
     "Rap",
     "2016",
     "https://i.imgur.com/LNMU4Ia.jpeg",
