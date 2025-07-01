@@ -36531,7 +36531,7 @@ function onGameWindowChangeCandidates() {
 
 let ChristieCand = { photo: 'https://imgur.com/lzV0zAy.png', name: 'Chris Christie', text: 'Your failed attempts to reform healthcare and kill Bin Laden have made the popular New Jersey governor enter the fray. Already, the polls are showing an unbelievable margins between him and you.', button: 'Defer', id: 'CHRISTIE_A'}
 let HuntsmanCand = { photo: 'https://imgur.com/ThvCNpw.png', name: 'Jon Huntsman', text: 'With your attempt to invite him to the administration failed, Jon Huntsman has officially entered the race for president. If your foreign policy is a mess, he will be the one to face you this November.', button: 'Defer', id: 'HUNTSMAN_B'}
-let CheneyCand = { photo: 'https://imgur.com/bMWFoxk.png', name: 'Dick Cheney', text: 'Dick Cheney? That Dick Cheney? It can\'t be real. What are the Republicans thinking, nominating the man who has a 13% approval rating upon leaving office? At this rate, winning Wyoming or Utah would be a hard challenge for them.', button: 'Defer', id: 'CHENEY_A'}
+let CheneyCand = { photo: 'https://imgur.com/bMWFoxk.png', name: 'Dick Cheney', text: 'Dick Cheney? That Dick Cheney? It can\'t be real. What are the Republicans thinking, nominating the man who had a 13% approval rating upon leaving office? At this rate, winning Wyoming or Utah would be a hard challenge for them.', button: 'Defer', id: 'CHENEY_A'}
 let CheneyImpeach = { photo: 'https://imgur.com/I7JJt2v.png', name: 'Dick Cheney', text: 'What the fuck are you doing? Are you going to lose to DICK FUCKING CHENEY?', button: 'Defer', id: 'CHENEY_B'}
 let GingrichCand = { photo: 'https://imgur.com/0fmfNqs.png', name: 'Newt Gingrich', text: 'The architecture of the \'Republican Revolution\' himself has returned this time to court your administrations dovishness on national security.', button: 'Defer', id: 'GINGRICH_A'}
 let BachmannCand = { photo: 'https://imgur.com/NWD5Got.png', name: 'Michele Bachmann', text: 'With evangelical outrage growing everyday since the beginning of your presidency, Michele Bachmann has tapped in that momentum to put her ahead in the polls.', button: 'Defer', id: 'BACHMANN_A'}
@@ -36574,6 +36574,7 @@ const WinsMap = {
     "5": `Obama-Biden has <i><span style="color: #15A600;">tons</i></span> of <b>wins</b>. (<span style="color:#15A600;">5</span>)`,
     "6": `Obama-Biden has <i><span style="color: #15A600;">tons</i></span> of <b>wins</b>. (<span style="color:#15A600;">6</span>)`,
     "7": `Obama-Biden has <i><span style="color: #15A600;">tons</i></span> of <b>wins</b>. (<span style="color:#15A600;">7</span>)`,
+    "8": `Obama-Biden has <i><span style="color: #15A600;">tons</i></span> of <b>wins</b>. (<span style="color:#15A600;">7</span>)`,
 };
 const CredMap = {
     "-9": `President Obama has <i><span style="color: #CE0F0F;">god awful</i></span> <b>credibility</b>. (<span style="color:#CE0F0F;">-9</span>)`,
@@ -36743,7 +36744,7 @@ function openSurrogates() {
             overviewtxt += "• "+  `We've <i>signed</i> the <span style="color: #FADC0E;">America's Healthy Future</span>` + "<br>" + `<span style="color: #FADC0E;">Act</span>` + "<br>";
         }
 		if(e.player_answers.includes(9017)){
-            overviewtxt += "• "+  `We've <em><span style="color: #CE0F0F;">failed healthcare reform.</span></em>` + "<br>";
+            overviewtxt += "• "+  `We've <em><span style="color: #CE0F0F;">failed healthcare reform</span></em>` + "<br>";
         }
 		
 		if(e.player_answers.includes(9098) ||  e.player_answers.includes(9101)){
