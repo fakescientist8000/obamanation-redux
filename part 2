@@ -36184,67 +36184,6 @@ const ads = [
                 }
             }    
         }
-			if(e.noCounter >= 29){
-			     if (Sanders == 1){
-	                 let index = menuItemsA.findIndex(item => item.id === 'SANDERS_B');
-                     if (index == -1) {
-                        menuItemsA.push(SandersCand);
-                    }
-			}
-			else{
-			index = menuItemsA.findIndex(item => item.id === 'RICE_A');
-            if (index !== -1) {
-                menuItemsA.splice(index, 1);
-                }
-			}
-		    }	
-		}
-		if(e.noCounter == 28){
-		    if (((Neolib == 1) && (e.player_answers.includes(8942)) && (e.player_answers.includes(9153) || e.player_answers.includes(9149) || e.player_answers.includes(9151)) && (Cred < 4)) || ((Socdem == 1) && (e.player_answers.includes(8942)) && (e.player_answers.includes(9147)) && (Cred < 4))){
-                  let index = menuItemsA.findIndex(item => item.id === 'HUNTSMAN_B');
-                  if (index == -1) {
-                     menuItemsA.unshift(HuntsmanCand);
-                  }
-            }
-		    else{
-		          index = menuItemsA.findIndex(item => item.id === 'HUNTSMAN_B');
-                  if (index !== -1) {
-                     menuItemsA.splice(index, 1);
-                  }
-			}
-		}	
-		if(e.noCounter == 26 && (Cred < 6) && (e.player_answers.includes(8972) && e.player_answers.includes(9162))){
-            let index = menuItemsA.findIndex(item => item.id === 'BLOOMBERG_A');
-            if (index == -1) {
-                menuItemsA.unshift(BloombergCand);
-            }
-		}
-		if(e.noCounter == 30 && ((Cred >= 6) || e.player_answers.includes(9202) || e.player_answers.includes(9204))){
-            let index = menuItemsA.findIndex(item => item.id === 'BLOOMBERG_A');
-            if (index !== -1) {
-                menuItemsA.splice(index, 1);
-            }
-		}
-		if(e.noCounter == 21 && (Socdem == 1) && (e.player_answers.includes(9131))){
-            let index = menuItemsA.findIndex(item => item.id === 'BACHMANN_A');
-            if (index == -1) {
-                menuItemsA.unshift(BachmannCand);
-            }
-		}
-		if(e.noCounter == 28){
-		    if (e.player_answers.includes(9178) || e.player_answers.includes(9179) || e.player_answers.includes(9180) || e.player_answers.includes(9181)){
-			    let index = menuItemsA.findIndex(item => item.id === 'BACHMANN_A');
-                if (index == -1) {
-                    menuItemsA.unshift(BachmannCand);
-                }
-			}
-			else{
-			    index = menuItemsA.findIndex(item => item.id === 'BACHMANN_A');
-                  if (index !== -1) {
-                     menuItemsA.splice(index, 1);
-                  }
-		    }
-		}
 		//Ron Paul Nomination
 		if (e.noCounter == 19){
 		   if ((e.player_answers.includes(8926) && e.player_answers.includes(8929)) && (e.player_answers.includes(8994) || e.player_answers.includes(8980) || e.player_answers.includes(8984)) && (e.player_answers.includes(9086) || e.player_answers.includes(9088) || e.player_answers.includes(9090) || e.player_answers.includes(9096) || e.player_answers.includes(9099) || e.player_answers.includes(9102) || e.player_answers.includes(9105) || e.player_answers.includes(9107))){
