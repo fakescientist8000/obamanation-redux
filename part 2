@@ -36168,13 +36168,22 @@ const ads = [
         }
 		//Rice Nomination
         if(e.noCounter < 32 && (Cred < 5) && (e.player_answers.includes(9173) || e.player_answers.includes(9174) || e.player_answers.includes(9179))){ 
-		    christie_check = menuItemsA.findIndex(item => item.id === 'CHRISTIE_A');
+            christie_check = menuItemsA.findIndex(item => item.id === 'CHRISTIE_A');
             if(christie_check == -1){
                 index = menuItemsA.findIndex(item => item.id === 'RICE_A');
                 if (index == -1) {
                     menuItemsA.unshift(RiceCand);
                 }
             }
+            if(e.noCounter >= 29){
+                if (Sanders != 1) {
+                    index = menuItemsA.findIndex(item => item.id === 'RICE_A');
+                    if (index !== -1) {
+                        menuItemsA.splice(index, 1);
+                    }
+                }
+            }    
+        }
 			if(e.noCounter >= 29){
 			     if (Sanders == 1){
 	                 let index = menuItemsA.findIndex(item => item.id === 'SANDERS_B');
