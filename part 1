@@ -321,9 +321,10 @@ if(!campaignTrail_temp.loaded1){
   {searchString: "Kagan", explanationText: "<img src=https://i.imgur.com/aNJUFjZ.jpeg> Totally not lesbian."},
   {searchString: "Sonia Sotomayor", explanationText: "<img src=https://i.imgur.com/cPhG7bN.jpeg> The Bush family's favorite Latina."},
   {searchString: "Merrick Garland", explanationText: "<img src=https://i.imgur.com/JIhU6Yx.jpeg> Mr. Compromise, and the GOP's favorite nominee."},
+  {searchString: "Garland", explanationText: "<img src=https://i.imgur.com/JIhU6Yx.jpeg> Mr. Compromise, and the GOP's favorite nominee."},
   {searchString: "Leah Ward Sears", explanationText: "<img src=https://i.imgur.com/Aagngj3.jpeg> Radical."},
   {searchString: "Diane Wood", explanationText: "<img src=https://i.imgur.com/6RxW6lF.jpeg> Baby killer."},
-  {searchString: "Kathleen Sullivan", explanationText: "<img src=https://i.imgur.com/9dlBXya.jpeg> Madame Pro Bono"},
+  {searchString: "Kathleen Sullivan", explanationText: "<img src=https://i.imgur.com/9dlBXya.jpeg> Madame Pro Bono."},
   {searchString: "Janet Napolitano", explanationText: "<img src=https://i.imgur.com/w4vj8rz.jpeg> La gringa de nuestra lista de jueces."}
 
   ];
@@ -335,7 +336,7 @@ if(!campaignTrail_temp.loaded1){
 	
 	RecReading=true
   
-	document.getElementById("header").src = "https://i.imgur.com/pP3zND5.png"
+	document.getElementById("header").src = "https://i.imgur.com/HlUShxi.png"
 	nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#08043d"
 	nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#cccccc"
 	document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title
