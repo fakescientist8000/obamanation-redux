@@ -851,11 +851,6 @@ if(!campaignTrail_temp.loaded1){
 	  "description" : "Defeat Newt Gingrich.",
 	  "cannotBeCheated" : true
 	},
-	"That One" : {
-	  "image" : "https://i.imgur.com/De1zNLh.png",
-	  "description" : "Defeat John McCain.",
-	  "cannotBeCheated" : true
-	},
 	"Tortoise and the Hare" : {
 	  "image" : "https://i.imgur.com/lQGKhyL.png",
 	  "description" : "Defeat Jeb Bush.",
@@ -871,16 +866,21 @@ if(!campaignTrail_temp.loaded1){
 	  "description" : "Defeat David Petraeus.",
 	  "cannotBeCheated" : true
 	},
-	"The Bigger They Are..." : {
-	  "image" : "https://i.imgur.com/VAR6YHv.png",
-	  "description" : "Defeat Chris Christie.",
-	  "cannotBeCheated" : true
-	},
 	"R.I.N.O." : {
 	  "image" : "https://i.imgur.com/fSDjoxC.png",
 	  "description" : "Defeat Jon Huntsman.",
 	  "cannotBeCheated" : true
 	},	
+	"The Bigger They Are..." : {
+	  "image" : "https://i.imgur.com/VAR6YHv.png",
+	  "description" : "Beat Goliath.",
+	  "cannotBeCheated" : true
+	},
+	"Once More, With Experience" : {
+	  "image" : "https://i.imgur.com/De1zNLh.png",
+	  "description" : "Make a sequel better than the original.",
+	  "cannotBeCheated" : true
+	},
 	"Last Judgement" : {
 	  "image" : "https://i.imgur.com/s9TDnDf.png",
 	  "description" : "Let justice be done.",
