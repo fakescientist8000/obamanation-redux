@@ -38382,7 +38382,7 @@ e.pages.push(`<h3>American History USA</h3>
 }
 else if ( quickstats[0] <= 269 && Rep == 2 ) { // Loss - Schwarzenegger
 e.pages.push(`<h3>American History USA</h3>
-          <p><i><b>THE CAMPAIGN TRAIL</i></b><br><br>Please select the election you will run in: <br><select name="election_id" id="election_id"><option value="0">2012</option></select><br><img src=https://i.imgur.com/GmbIusN.png>	<br>Barack Obama attempts to reunite his party following a troublesome first term, while Arnold Schwarzenegger aims to sell himself as a nonpartisan voice who can predominately appeal to the Republican Party, who has nominated him. The poor economy, healthcare, and the administration's response to foreign affairs loom large in the 2012 election.<ul><li>Barack Obama is seeking re-election after presiding over the Great Recession and Arab Spring, all the while needing to defend his domestic agenda.</li><li>Arnold Schwarzenegger will hope to capitalize on the botched raid on Osama bin Laden's compound and the perceived anti-police bias persistently signalled by the administration.</li></ul><br><button>Continue</button></p>`)
+          <p><i><b>THE CAMPAIGN TRAIL</i></b><br><br>Please select the election you will run in: <br><select name="election_id" id="election_id"><option value="0">2012</option></select><br><img src=https://i.imgur.com/GmbIusN.png>	<br>Barack Obama attempts to reunite his party following a troublesome first term, while Arnold Schwarzenegger aims to sell himself as a nonpartisan voice who can predominately appeal to the Republican Party, who has nominated him. The poor economy, healthcare, and the administration's response to foreign affairs loom large in the 2012 election.<ul><li>Barack Obama is seeking re-election after presiding over the Great Recession and Arab Spring, all the while needing to defend his domestic agenda.</li><li>Arnold Schwarzenegger will hope to capitalize on the botched raid on Osama bin Laden's compound and the perceived youth apathy persistently signalled by the administration.</li></ul><br><button>Continue</button></p>`)
     e.executable.push([4, (() => {e.image = e.image = 'https://i.imgur.com/znS7Ptl.png'})])
 }
 
@@ -38413,7 +38413,7 @@ e.pages.push(`<h3>American History USA</h3>
         }
 
         if (quickstats[0] >= 270 && Rep == 2) { // beat Ahnuld
-            ctsAchievement("Last Judgement");  
+            ctsAchievement("Won't Be Back");  
         }
 
         if (quickstats[0] >= 270 && Rep == 25) { // beat Trump
@@ -38429,7 +38429,7 @@ e.pages.push(`<h3>American History USA</h3>
         }
 
         if (quickstats[0] >= 270 && Rep == 21) { // beat Palin
-            ctsAchievement("Refudiated");  
+            ctsAchievement("Girlboss");  
         }
 
         if (quickstats[0] >= 270 && Rep == 6) { // beat Cheney
@@ -38445,7 +38445,7 @@ e.pages.push(`<h3>American History USA</h3>
         }
 
         if (quickstats[0] >= 270 && Rep == 3) { // beat McCain
-            ctsAchievement("That One");  
+            ctsAchievement("Once More, With Experience");  
         }
 
         if (quickstats[0] >= 270 && Rep == 24) { // beat Arpaio
