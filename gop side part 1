@@ -1,1 +1,428 @@
-
+class Song {
+	  constructor(title, artist, genre, year, coverLink, audioLink) {
+		this.title = title;
+		this.artist = artist;
+		this.genre = genre;
+		this.year = year;
+		this.coverLink = coverLink;
+		this.audioLink = audioLink;
+	  }
+	  getTitle() {
+		return this.title;
+	  }
+	
+	  getArtist() {
+		return this.artist;
+	  }
+  
+	  getGenre() {
+		return this.genre;
+	  }
+  
+	  getYear() {
+		return this.year;
+	  }
+	
+	  getCoverLink() {
+		return this.coverLink;
+	  }
+	
+	  getAudioLink() {
+		return this.audioLink;
+	  }
+	}
+	
+	class Playlist {
+	  constructor() {
+		this.songs = [];
+		this.currentSongIndex = 0;
+	  }
+	
+	  addSong(song) {
+		this.songs.push(song);
+	  }
+	
+	  getCurrentSong() {
+		return this.songs[this.currentSongIndex];
+	  }
+	
+	  playNext() {
+		this.currentSongIndex = (this.currentSongIndex + 1) % this.songs.length;
+	  }
+	
+	  playPrevious() {
+		this.currentSongIndex = (this.currentSongIndex - 1 + this.songs.length) % this.songs.length;
+	  }
+	}
+	window.Playlist=Playlist
+	window.Song=Song
+	
+	function changePlaylist(newPlaylist) {
+	  playlist = newPlaylist;
+	  playlist.currentSongIndex = 0;
+	  updateUI(playlist);
+	  const audio = document.getElementById("audio");
+	  audio.src = playlist.getCurrentSong().audioLink;
+	  audio.play();
+	}
+	window.changePlaylist=changePlaylist
+	
+	function updateUI(playlist) {
+		const currentSong = playlist.getCurrentSong();
+		var player = document.getElementById("player");
+		player.querySelector("#cover").src = currentSong.getCoverLink();
+		player.querySelector("#title").textContent = currentSong.getTitle();
+		player.querySelector("#artist").textContent = currentSong.getArtist();
+		player.querySelector("#genre").textContent = currentSong.getGenre();
+		player.querySelector("#year").textContent = currentSong.getYear();
+	}
+	
+	window.updateUI=updateUI
+	
+	
+	function setupMusicPlayer() {
+	  playlist = new Playlist();
+	
+	
+	  const song1 = new Song(
+		"American Ride",
+		"Toby Keith",
+		"Country",
+		"2009",
+		"https://i.imgur.com/kzKzRea.jpg",
+		"https://file.garden/ZjghkE74SkXuNmZh/Queen%20of%20Hearts.mp3"
+	  );
+  
+	  const song2 = new Song(
+		"Read Me My Rights",
+		"Brantley Gilbert",
+		"Country Rock",
+		"2014",
+		"https://i.imgur.com/BVeaxNp.jpg",
+		"https://file.garden/ZlwBsQzAvyz0wLEA/Millennium%20of%20The%20Blind.mp3"
+	  );
+  
+	  const song3 = new Song(
+		"Heaven",
+		"3 Doors Down",
+		"Rock",
+		"2010",
+		"https://i.imgur.com/NxVx797.jpg",
+		"https://file.garden/ZjghkE74SkXuNmZh/Hussein.mp3"
+	  );
+  
+	  const song4 = new Song(
+		"America Will Survive",
+		"Hank Williams Jr.",
+		"Country",
+		"2002",
+		"https://i.imgur.com/VL3gxOB.jpg",
+		"https://file.garden/ZkYlpFmp3wv99L22/Ab-Soul.mp3"
+	  );
+  
+	  const song5 = new Song(
+		"Gin Smoke Lies",
+		"Turnpike Troubadours",
+		"Country",
+		"2012",
+		"https://i.imgur.com/sukNaz4.jpg",
+		"https://files.catbox.moe/ze2qii.mp3"
+	  );
+  
+	  const song6 = new Song(
+		"Lucy",
+		"Skillet",
+		"Christian Rock",
+		"2011",
+		"https://i.imgur.com/MObxHCK.jpg",
+		"https://file.garden/ZjwDHsS1nDDehStj/Words%20I%20Never%20Said.mp3"
+	  );
+  
+	  const song7 = new Song(
+		"Highland",
+		"Blackmore's Night",
+		"Folk Rock",
+		"2010",
+		"https://i.imgur.com/TxaXLNv.jpeg",
+		"https://file.garden/ZlwBsQzAvyz0wLEA/Illuminati.mp3"
+	  );
+	
+	  playlist.addSong(song1);
+	  playlist.addSong(song2);
+	  playlist.addSong(song3);
+	  playlist.addSong(song4);
+	  playlist.addSong(song5);
+	  playlist.addSong(song6);
+	  playlist.addSong(song7);
+	
+	  const playerContainer = document.createElement("div");
+	  playerContainer.id = "player";
+	
+	 const displayBox = document.createElement("div");
+	displayBox.id = "display-box";
+	
+	const coverElement = document.createElement("img");
+	coverElement.id = "cover";
+	displayBox.appendChild(coverElement);
+	
+	const infoContainer = document.createElement("div");
+	infoContainer.id = "info-container";
+	infoContainer.style.backgroundImage = "url('')";
+	infoContainer.style.backgroundSize = "cover"; // Optional: adjust based on your needs
+	infoContainer.style.color = "black"; // Set text color to white
+	
+	const songInfo = document.createElement("div");
+	songInfo.id = "song-info";
+	
+	const titleElement = document.createElement("h3");
+	titleElement.id = "title";
+	titleElement.style.fontWeight = 'bold'; // Make it normal as per previous request
+	songInfo.appendChild(titleElement);
+	
+	const artistElement = document.createElement("p");
+	artistElement.id = "artist";
+	songInfo.appendChild(artistElement);
+  
+	const genreElement = document.createElement("p");
+	genreElement.id = "genre";
+	songInfo.appendChild(genreElement);
+  
+	const yearElement = document.createElement("p");
+	yearElement.id = "year";
+	songInfo.appendChild(yearElement);
+	
+	infoContainer.appendChild(songInfo);
+	displayBox.appendChild(infoContainer);
+	
+	playerContainer.appendChild(displayBox);
+	
+	const controlsContainer = document.createElement("div");
+	controlsContainer.id = "controls-container";
+	
+	const controls = document.createElement("div");
+	controls.id = "controls";
+	
+	const prevButton = document.createElement("img");
+	prevButton.id = "prevButton";
+	prevButton.src = "https://i.imgur.com/tbB2NMq.png";
+	prevButton.alt = "Previous";
+	controls.appendChild(prevButton);
+	
+	const playPauseButton = document.createElement("img");
+	playPauseButton.id = "playPauseButton";
+	playPauseButton.src = "https://i.imgur.com/qLb9UqQ.png"; // Set the default play image
+	playPauseButton.alt = "Play/Pause";
+	controls.appendChild(playPauseButton);
+	
+	const nextButton = document.createElement("img");
+	nextButton.id = "nextButton";
+	nextButton.src = "https://i.imgur.com/e69GXWV.png";
+	nextButton.alt = "Next";
+	controls.appendChild(nextButton);
+	
+	controlsContainer.appendChild(controls);
+	
+	playPauseButton.addEventListener("click", function () {
+	  const audio = document.getElementById("audio");
+	  if (audio.paused) {
+		audio.play();
+		playPauseButton.src = "https://i.imgur.com/qLb9UqQ.png"; // Set the pause image
+	  } else {
+		audio.pause();
+		playPauseButton.src = "https://i.imgur.com/gZME5QC.png"; // Set the play image
+	  }
+	});
+	
+	nextButton.addEventListener("click", function () {
+	  playlist.playNext();
+	  updateUI(playlist);
+	  const audio = document.getElementById("audio");
+	  audio.src = playlist.getCurrentSong().audioLink;
+	  audio.play();
+	});
+	
+	prevButton.addEventListener("click", function () {
+	  playlist.playPrevious();
+	  updateUI(playlist);
+	  const audio = document.getElementById("audio");
+	  audio.src = playlist.getCurrentSong().audioLink;
+	  audio.play();
+	});
+	
+	  const progressBarContainer = document.createElement("div");
+	  progressBarContainer.id = "progress-bar-container";
+	  progressBarContainer.role = "progressbar";
+	
+	  const progressBar = document.createElement("div");
+	  progressBar.role = "paused";
+	  progressBar.id = "progress";
+	
+	
+	  progressBarContainer.appendChild(progressBar);
+	  controlsContainer.appendChild(progressBarContainer);
+	  playerContainer.appendChild(controlsContainer);
+	
+	 const volumeContainer = document.createElement("div");
+		volumeContainer.id = "volume-container";
+	
+	const volumeLabel = document.createElement("img");
+	volumeLabel.src = "https://i.imgur.com/fvct8dN.png";
+	volumeLabel.alt = "Volume";
+	volumeContainer.appendChild(volumeLabel);
+	
+		const volumeSliderContainer = document.createElement("div");
+		volumeSliderContainer.classList.add("is-vertical");
+		volumeSliderContainer.style.marginLeft = "45%";
+		volumeSliderContainer.style.height = "126px";
+	
+		const volumeSlider = document.createElement("input");
+		volumeSlider.type = "range";
+		volumeSlider.id = "volumeSlider";
+		volumeSlider.min = 0;
+		volumeSlider.max = 9;
+		volumeSlider.step = 1;
+		volumeSlider.value = 2; // Initial volume
+	
+		volumeSliderContainer.appendChild(volumeSlider);
+	
+		const volumeDisplay = document.createElement("span");
+		volumeDisplay.id = "volume-display";
+		volumeDisplay.style.fontWeight = 'bold'; 
+		volumeDisplay.style.display = 'none';
+		volumeDisplay.textContent = "1";
+	
+		volumeContainer.appendChild(volumeSliderContainer);
+		volumeContainer.appendChild(volumeDisplay);
+	
+		playerContainer.appendChild(volumeContainer);
+	
+	  gameWindow_player.insertAdjacentElement("afterend", playerContainer);
+	
+	
+	  function updateProgressBar() {
+		const audio = document.getElementById("audio");
+		const progress = (audio.currentTime / audio.duration) * 100;
+		try{progressBar.style.width = progress + "%";}
+		catch{}
+	  }
+	
+	 
+	  progressBar.addEventListener("input", function () {
+		const audio = document.getElementById("audio");
+		const seekTime = (progressBar.value / 100) * audio.duration;
+		audio.currentTime = seekTime;
+	  });
+	
+	  const audio = document.createElement("audio");
+	  audio.id = "audio";
+	  audio.src = playlist.getCurrentSong().audioLink;
+	  audio.volume = 1/9;
+	
+	  audio.addEventListener("timeupdate", updateProgressBar);
+	  audio.addEventListener("ended", function () {
+		  // Play the next song when the current song ends
+		  playlist.playNext();
+		  updateUI(playlist);
+		  audio.src = playlist.getCurrentSong().audioLink;
+		  audio.play();
+		});
+	
+		let currentVolume = 2; // Initial volume
+	
+		volumeSlider.addEventListener("input", function () {
+		  currentVolume = parseInt(volumeSlider.value, 10);
+		  updateVolumeDisplay();
+		  updateAudioVolume();
+		});
+	
+		function updateVolumeDisplay() {
+		  volumeDisplay.textContent = currentVolume;
+		}
+	
+	   function updateAudioVolume() {
+		const audio = document.getElementById("audio");
+		audio.volume = currentVolume / 9; // Set volume between 0 and 1
+	  }
+	
+	  document.body.appendChild(audio);
+	  audio.play();
+	
+	  // Update the UI when the page loads
+	  updateUI(playlist);
+	}
+	
+	const style = document.createElement("style");
+	style.textContent = `
+	#player {
+		border: 3px solid #C9C9C9; /* Add your desired border style */
+		display: flex;
+		flex-direction: row;
+		height:191px;
+		background-Image: url("https://i.imgur.com/l2YqtSl.png");
+	  }
+	
+	  #display-box {
+		display: flex;
+		align-items: center;
+		width: 50%;
+	  }
+  
+	  p#credits {
+		color: white;
+	  }
+	
+	  #cover {
+		width: 176px;
+		height:176px;
+	  }
+  
+	  #final_results_description p {
+		color: white;
+	  }
+	
+	  #info-container {
+		display: flex;
+		flex-direction: row;
+		height:185px;
+		width:185px;
+		margin-top: 3px;
+		font-family: Segoe UI;
+	  }
+	
+	  #song-info {
+		width: 100%;
+		padding:5px;
+	  }
+	
+	  #controls-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 10px;
+		width:100%;
+		padding-top:15px;
+	
+	  }
+	  .is-vertical #volumeSlider {
+	  width: 125px;
+	}
+	
+	  #controls {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: 80%;
+	  }
+	
+	  #progress-bar-container {
+		width: 100%;
+	  }
+	
+	  #progress-bar {
+		width: 80%;
+		margin: auto;
+		display: flex;
+		margin-Top: 20px;
+	  }
+	  
+	`;
